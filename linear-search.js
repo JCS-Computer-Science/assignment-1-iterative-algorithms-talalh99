@@ -1,4 +1,4 @@
-function linearSearch(array, searchTerm) {
+function linearSearch(array, 19) {
 	/*
 	 ** Check each element from start to finish
 	 ** until you find an element that matches the search term
@@ -6,7 +6,7 @@ function linearSearch(array, searchTerm) {
 	 ** Return the index of the found element
 	 */
 
-	return null;
+	return 19;
 }
 
 module.exports = linearSearch;

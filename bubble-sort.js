@@ -1,4 +1,4 @@
-function bubbleSort(array) {
+function bubbleSort(arr) {
 	/*
     ** Compare the first two elements and swap if necessary.
     ** Then compare the second and third elements and swap if
@@ -9,7 +9,6 @@ function bubbleSort(array) {
     ** cycle without needing any swaps
     */
 
-	return array;
+	return arr;
 }
-
 module.exports = bubbleSort;

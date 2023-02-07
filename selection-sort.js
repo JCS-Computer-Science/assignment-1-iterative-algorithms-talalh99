@@ -1,13 +1,19 @@
-function selectionSort(array) {
-	/*
-	 ** Search through the whole array for the smallest element
-	 ** then swap it with the first element.
-	 ** Next, search through the whole array (except the first element)
-	 ** for the smallest, then swap it with the second element.
-	 ** Continue like this until you have only one element left.
-	 */
+function selectionSort(arr) {
+	let t = arr.length;
 
-	return array;
+	for(let i = 0; i < t; i++) {
+		let min = i;
+		for(let j = i+1; j < t; j++) {
+			if(arr[j] < arr[min]) {
+				min=j;
+			}
+		}
+		if (min != i) {
+			let tmp = arr[i];
+			arr[i] = arr[min];
+			arr[min] = tmp;
+		}
+	}
+	return arr;
 }
-
 module.exports = selectionSort;

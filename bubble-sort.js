@@ -1,18 +1,13 @@
-function bubbleSort(numberArr, size) {
-    for (var lastIndex = size - 1; lastIndex > 0; lastIndex--) {
-        for (var i = 0; i < lastIndex; i++) {
-            if (numberArr[i] > numberArr[i + 1]) {
-                var temp = numberArr[i];
-                numberArr[i] = numberArr[i + 1];
-                numberArr[i + 1] = temp;
-            }
+function bubbleSort(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+      for (let j = 0; j < i; j++) {
+        if (arr[j] > arr[j + 1]) {
+          ;[arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]
         }
+      }
     }
-    return numberArr;
-}
-var arr = [14, -25, 65, 19, 23, 4];
-console.log(bubbleSort(arr, arr.length));
-module.exports = bubbleSort;
+    return arr
+  }
 /*
     ** Compare the first two elements and swap if necessary.
     ** Then compare the second and third elements and swap if
@@ -23,17 +18,3 @@ module.exports = bubbleSort;
     ** cycle without needing any swaps
     */
 
-/* 
-    **let isSwapped = true
-    while(isSwapped) {
-        isSwapped = false
-        arr.forEach((item, index) => {
-            if(item > arr[index +1]) {
-                arr[index] = arr[index + 1]
-                arr[index + 1] = item
-                isSwapped = true
-            }
-        })
-        return arr
-    }
-*/
